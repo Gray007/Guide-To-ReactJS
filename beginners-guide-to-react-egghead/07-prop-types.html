@@ -14,6 +14,10 @@
         </div>
       )
     }
+    SayHello.propTypes = {
+      firstName: PropTypes.string.isRequired,
+      lastName: PropTypes.string.isRequired,
+    }
 
     const element = <SayHello firstName={false} />
 
