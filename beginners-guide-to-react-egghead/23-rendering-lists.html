@@ -1,3 +1,4 @@
+<!-- Initial State -->
 <body>
   <div id="root"></div>
   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
@@ -29,7 +30,7 @@
           </button>
           <ul style={{listStyle: 'none', paddingLeft: 0}}>
             {items.map(item => (
-              <li>
+              <li key={item.id}>
                 <button onClick={() => removeItem(item)}>remove</button>{' '}
                 <label htmlFor={`${item.value}-input`}>{item.value}</label>{' '}
                 <input id={`${item.value}-input`} defaultValue={item.value} />
@@ -101,6 +102,6 @@
       return array
     }
     // uncomment this line to demo:
-    // ReactDOM.render(<FocusDemo />, document.getElementById('root'))
+    ReactDOM.render(<FocusDemo />, document.getElementById('root'))
   </script>
 </body>
